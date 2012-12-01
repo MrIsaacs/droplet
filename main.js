@@ -1,4 +1,4 @@
-Physijs.scripts.worker = 'javascripts/plugins/threejs/physijs_worker.js';
+Physijs.scripts.worker = 'javascripts/physijs/physijs_worker.js';
 Physijs.scripts.ammo = 'ammo.js';
 
 var renderer, scene, camera, box, plane;
@@ -48,10 +48,10 @@ function init()
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize( viewPort.width, viewPort.height );
     
-    $container = $('#viewPort');
+    $container = $('#game-view');
     $container.append( renderer.domElement );
     $canvas = $('canvas');
-    $canvas.css('background-color', '#eebb00');
+    $canvas.css('background-color', '#336699');
     
     scene = new Physijs.Scene;
     lvl.bgMusic = document.getElementById('bgMusic');
@@ -205,8 +205,8 @@ function loadLevel() {
 	cloud[30]			= new Physijs.BoxMesh( geometry, material );
 	cloud[30].position	= new THREE.Vector3( THREE.Math.randFloat( -33, 33 ), -620, 0 );
 
-	cloud[30]			= new Physijs.BoxMesh( geometry, material );
-	cloud[30].position	= new THREE.Vector3( THREE.Math.randFloat( -33, 33 ), -640, 0 );
+	cloud[85]			= new Physijs.BoxMesh( geometry, material );
+	cloud[85].position	= new THREE.Vector3( THREE.Math.randFloat( -33, 33 ), -640, 0 );
 
 	cloud[31]			= new Physijs.BoxMesh( geometry, material );
 	cloud[31].position	= new THREE.Vector3( THREE.Math.randFloat( -33, 33 ), -660, 0 );
@@ -383,7 +383,6 @@ function addClouds(clouds) {
 
 function update() {
     camera.position.y = drop.position.y;
-    console.log(drop.position);
     
     if( keyboard.pressed( 'A' ) ) {
             drop.position.x -= 0.7;
