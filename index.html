@@ -7,17 +7,18 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://mrdoob.github.com/three.js/build/three.js"></script>
     <script type="text/javascript" src="https://raw.github.com/MrIsaacs/droplet/master/javascripts/threejs/THREEx.KeyboardState.js"></script>
     <script type="text/javascript" src="https://raw.github.com/MrIsaacs/droplet/master/javascripts/physijs/physi.js"></script>
     <script type="text/javascript" src="https://raw.github.com/MrIsaacs/droplet/master/main.js"></script>
   </head>
   <body onLoad="init();">
+	<audio id="bgMusic" src="assets/music/emish_askingnoone.mp3" preload="auto" loop></audio>
     <div class="wrapper">
       <header>
         <h1>droplet</h1>
@@ -34,7 +35,7 @@
       </header>
       <section>
         <p>Description-File of the Development of droplet.</p>
-        <div id="game-view"></div>
+        <div id="game_view"></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/MrIsaacs">MrIsaacs</a></p>
